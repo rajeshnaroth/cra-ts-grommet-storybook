@@ -1,12 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Spinner} from "./Spinner"
+import { Grommet } from "grommet";
+import { hpe } from "grommet-theme-hpe";
 
 const App: React.FC = () => {
   return (
     <div className="App">
+      <Grommet theme={hpe} full={true}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Spinner />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -19,6 +24,7 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
+      </Grommet>
     </div>
   );
 }
